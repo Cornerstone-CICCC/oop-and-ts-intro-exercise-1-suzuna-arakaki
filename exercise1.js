@@ -23,7 +23,7 @@ class Car {
     }
   }
 
-  getCarInfo(year) {
+  getCarInfo() {
     return `Make: ${this.#make} , Model: ${this.#model}, Year: ${this.#year}`
   }
 }
