@@ -6,6 +6,35 @@
 
 class Book {
   // YOUR CODE HERE
+
+  #title
+  #author
+  #price
+
+  constructor(title, author, price) {
+    this.#title = title;
+    this.#author = author;
+    this.#price = price;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  get title() {
+    return this.#title;
+  }
+
+  set title(newTitle) {
+    if (newTitle) {
+      return this.#title = newTitle;
+    }
+  }
+
+  addDiscount(discountPercentage) {
+    const discountAmount = this.#price / discountPercentage;
+    return this.#price -= discountAmount;
+  }
 }
 
 
